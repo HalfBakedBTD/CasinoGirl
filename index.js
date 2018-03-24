@@ -32,16 +32,16 @@ bot.on("message", async message => {
 		if (number === 1000) {
 			return message.channel.send(`🎉 YOU HAVE WON **__9x__** YOUR BET 🎉`)
 		}
-		if (number >== 989) {
+		if (number >= 989) {
 			return message.channel.send(`🎉 YOU HAVE WON **__4x__** YOUR BET 🎉`)
 		}
-		if (number >== 985) {
+		if (number >= 985) {
 			return message.channel.send(`🎉 YOU HAVE WON **__3x__** YOUR BET 🎉`)
 		}
-		if (number >== 905) {
+		if (number >= 905) {
 			return message.channel.send(`🎉 YOU HAVE WON **__2x__** YOUR BET 🎉`)
 		}
-		if (number <== 904) {
+		if (number <= 904) {
 			return message.channel.send(`☹ YOU HAVE LOST YOUR BET ☹`)
 		}
 	}
