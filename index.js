@@ -27,6 +27,9 @@ bot.on("message", async message => {
 		message.channel.send(`\`ERR: Please say how much you bet.\`\n\n**Example:** \`>bet 10$\``)
 	}
 	if (message.content.startsWith('>bet ')) {
+		if (message.author.id !== '346687165868015616') {
+      if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("No. Why would I do this for you? I have a **Admin only** policy.");
+		}
 		if (button_talked_users.has(message.author.id)) return message.reply("You have to wait before using this command again.\n*[30 second cooldown]*");
 		let random = Math.random() * 999 + 1;
     var number = Math.round(random)
