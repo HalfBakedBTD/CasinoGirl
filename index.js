@@ -22,3 +22,6 @@ bot.on("message", async message => {
     message.channel.send(`<@{message.author.id}> shikapong! I'm Online!`)
   }
 });
+
+
+bot.login(process.env.BOT_TOKEN);
