@@ -32,6 +32,11 @@ bot.on("message", async message => {
     var number = Math.round(random)
 		message.channel.send(`<@${message.author.id}> has rolled **${number}**!`)
 		
+		button_talked_users.add(message.author.id);
+    setTimeout(() => {
+      button_talked_users.delete(message.author.id);
+    }, button_cooldown_time * 1000);
+		
 		if (number === 1000) {
 			return message.channel.send(`🎉 YOU HAVE WON **__9x__** YOUR BET 🎉`)
 		}
@@ -47,10 +52,6 @@ bot.on("message", async message => {
 		if (number <= 904) {
 			return message.channel.send(`☹ YOU HAVE LOST YOUR BET ☹`)
 		}
-		button_talked_users.add(message.author.id);
-    setTimeout(() => {
-      button_talked_users.delete(message.author.id);
-    }, button_cooldown_time * 1000);
 	}
 });
 
