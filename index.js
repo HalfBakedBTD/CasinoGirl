@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const fs = require("fs");
 const bot = new Discord.Client({disableEveryone: true});
+const button_cooldown_time = 30;
+const button_talked_users = new Set();
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online!`);
@@ -25,6 +27,7 @@ bot.on("message", async message => {
 		message.channel.send(`\`ERR: Please say how much you bet.\`\n\n**Example:** \`>bet 10$\``)
 	}
 	if (message.content.startsWith('>bet ')) {
+		if (button_talked_users.has(message.author.id)) return message.reply("You have to wait before using this command again.\n*[30 second cooldown]*");
 		let random = Math.random() * 999 + 1;
     var number = Math.round(random)
 		message.channel.send(`<@${message.author.id}> has rolled **${number}**!`)
@@ -44,6 +47,10 @@ bot.on("message", async message => {
 		if (number <= 904) {
 			return message.channel.send(`☹ YOU HAVE LOST YOUR BET ☹`)
 		}
+		button_talked_users.add(message.author.id);
+    setTimeout(() => {
+      button_talked_users.delete(message.author.id);
+    }, button_cooldown_time * 1000);
 	}
 });
 
