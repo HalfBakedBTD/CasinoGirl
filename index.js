@@ -21,6 +21,12 @@ bot.on("message", async message => {
   if (message.content === '>ping') {
     message.channel.send(`<@${message.author.id}> shikapong! I'm Online!`)
   }
+	if (message.content === '^bet') {
+		message.channel.send(`\`ERR: Please say how much you bet.\`\n\n**Example:** \`>bet 10$\``)
+	if (message.content.startsWith('^bet ')) {
+		let random = Math.random() * 999 + 1;
+    var number = Math.round(random)
+		message.channel.send(`<@${message.author.id}> the **Random Draw** landed on: **${number}**`)
 });
 
 
