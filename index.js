@@ -60,7 +60,7 @@ bot.on("message", async message => {
 		if (message.author.id !== '346687165868015616') {
       if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("No. Why would I do this for you? I have a **Admin only** policy.");
 		}
-		let slots = ["🍋", "🍎", "🍍", "🍏", "🍌", "🍅", "🍇", "🍋", "🍎", "🍍", "🍏", "🍌", "🍅", "🍇", "🥝", "💎", "🥝"]
+		let slots = ["🍋", "🍎", "🍍", "🍏", "🍌", "🍅", "🍇", "🍋", "🍎", "🍍", "🍏", "🍌", "🍅", "🍇", "🥝", "💎", "🥝", "💩", "💩", "💩"]
 		let pong = Math.floor((Math.random() * slots.length));
 		let ptwo = Math.floor((Math.random() * slots.length));
 		let pthree = Math.floor((Math.random() * slots.length));
