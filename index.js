@@ -56,6 +56,22 @@ bot.on("message", async message => {
 			return message.channel.send(`☹ YOU HAVE LOST YOUR BET ☹`)
 		}
 	}
+	if (message.content === '>slots') {
+		if (message.author.id !== '346687165868015616') {
+      if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("No. Why would I do this for you? I have a **Admin only** policy.");
+		}
+		let slots = ["🍋", "🍎", "🍍", "🍏", "🍌", "🍅", "🍇", "🍋", "🍎", "🍍", "🍏", "🍌", "🍅", "🍇", "🥝", "💎", "🥝"]
+		let pong = Math.floor((Math.random() * slots.length));
+		let ptwo = Math.floor((Math.random() * slots.length));
+		let pthree = Math.floor((Math.random() * slots.length));
+		let pfour = Math.floor((Math.random() * slots.length));
+		let pfive = Math.floor((Math.random() * slots.length));
+		let psix = Math.floor((Math.random() * slots.length));
+		let pseven = Math.floor((Math.random() * slots.length));
+		let peight = Math.floor((Math.random() * slots.length));
+		let pnine = Math.floor((Math.random() * slots.length));
+		return message.channel.send(`${slots[pong]} ${slots[ptwo]} ${slots[pthree]}\n${slots[pfour]} ${slots[pfive]} ${slots[psix]}\n${slots[pseven]} ${slots[peight]}\n${slots[pnine]}`)
+		}
 });
 
 
