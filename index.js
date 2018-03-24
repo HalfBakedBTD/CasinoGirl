@@ -70,7 +70,7 @@ bot.on("message", async message => {
 		let pseven = Math.floor((Math.random() * slots.length));
 		let peight = Math.floor((Math.random() * slots.length));
 		let pnine = Math.floor((Math.random() * slots.length));
-		return message.channel.send(`${slots[pong]} ${slots[ptwo]} ${slots[pthree]}\n${slots[pfour]} ${slots[pfive]} ${slots[psix]}\n${slots[pseven]} ${slots[peight]}\n${slots[pnine]}`)
+		return message.channel.send(`**[- SLOTS -]**\n${slots[pong]}${slots[ptwo]}${slots[pthree]}\n${slots[pfour]}${slots[pfive]}${slots[psix]}\n${slots[pseven]}${slots[peight]}${slots[pnine]}\n**[- SLOTS -]**`)
 		}
 });
 
