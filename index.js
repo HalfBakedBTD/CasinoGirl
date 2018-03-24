@@ -19,7 +19,7 @@ bot.on("message", async message => {
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
   if (message.content === '>ping') {
-    message.channel.send(`<@{message.author.id}> shikapong! I'm Online!`)
+    message.channel.send(`<@${message.author.id}> shikapong! I'm Online!`)
   }
 });
 
