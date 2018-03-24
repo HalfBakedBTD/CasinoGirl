@@ -27,7 +27,23 @@ bot.on("message", async message => {
 	if (message.content.startsWith('>bet ')) {
 		let random = Math.random() * 999 + 1;
     var number = Math.round(random)
-		message.channel.send(`<@${message.author.id}> the **Random Draw** landed on: **${number}**`)
+		message.channel.send(`<@${message.author.id}> has rolled **${number}**!`)
+		
+		if (number === 1000) {
+			return message.channel.send(`🎉 YOU HAVE WON **__9x__** YOUR BET 🎉`)
+		}
+		if (number >== 989) {
+			return message.channel.send(`🎉 YOU HAVE WON **__4x__** YOUR BET 🎉`)
+		}
+		if (number >== 985) {
+			return message.channel.send(`🎉 YOU HAVE WON **__3x__** YOUR BET 🎉`)
+		}
+		if (number >== 905) {
+			return message.channel.send(`🎉 YOU HAVE WON **__2x__** YOUR BET 🎉`)
+		}
+		if (number <== 904) {
+			return message.channel.send(`☹ YOU HAVE LOST YOUR BET ☹`)
+		}
 	}
 });
 
