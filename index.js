@@ -20,6 +20,9 @@ bot.on("message", async message => {
   let messageArray = message.content.split(" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
+	if (message.content === '>help') {
+		return message.channel.send(`<@${message.author.id}> here are my commands:\n:small_red_triangle: **>ping** - Pings me and I will respond if online.\n\n:briefcase: **>bet** - Allows betting of money.\n:candy: **>slot-prizes** - Displays what each emoji on the slots stand for.\n:dollar: **>slots** - Rolls the classic slots bar.\n:poultry_leg: **>slots-food** - Rolls food slots bar.`)
+	}
   if (message.content === '>ping') {
     message.channel.send(`<@${message.author.id}> shikapong! I'm Online!`)
   }
