@@ -60,7 +60,7 @@ bot.on("message", async message => {
 		}
 	}
 	if (message.content === '>slot-prizes') {
-		return message.channel.send("**💩 -** \n\tThis works as a wasted spot. Nothing can be won from getting these.\n\n**🍋, 🍎, 🍍, 🍏, 🍌, 🍅, 🍇, and 🥝 -** \n\tThree in a Row: 2x the bet.\n\t2 Three in a Rows: 3x the bet.\n\t9 Matches/Whipeout: 4.5x the bet.\n\n**💎 -** \n\tThree in a Row: 4x the bet.\n\t2 Three in a Rows: 6x the bet.\n\t9 Matches/Whipeout: 9x the bet.")
+		return message.channel.send("**💩, 🥗 -** \n\tThis works as a wasted spot. Nothing can be won from getting these.\n\n**🍋, 🍎, 🍍, 🍏, 🍌, 🍅, 🍇, 🥝, 🍕, 🍔, 🌯, 🍟, 🍤, 🍖, 🍗, 🍚 -** \n\tThree in a Row: 2x the bet.\n\t2 Three in a Rows: 3x the bet.\n\t9 Matches/Whipeout: 4.5x the bet.\n\n**💎, 💵 -** \n\tThree in a Row: 4x the bet.\n\t2 Three in a Rows: 6x the bet.\n\t9 Matches/Whipeout: 9x the bet.")
 	}
 	if (message.content === '>slots') {
 		if (message.author.id !== '346687165868015616') {
